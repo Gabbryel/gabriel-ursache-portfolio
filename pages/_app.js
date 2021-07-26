@@ -1,8 +1,11 @@
 import '../styles/globals.scss';
 import Layout from './../components/layout';
 import Head from 'next/head';
+import { vh, vhOnResize } from '../helpers/vh';
 
 function MyApp({ Component, pageProps }) {
+  vh()
+  vhOnResize()
   return (
     <Layout>
       <Head>

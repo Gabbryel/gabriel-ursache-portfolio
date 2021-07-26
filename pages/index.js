@@ -1,6 +1,11 @@
+import HomePageMain from '../components/main/homePageMain';
+import { Fragment } from 'react';
+
 function HomePage() {
   return (
-    <h1>Gabriel's webpage</h1>
+    <Fragment>
+      <HomePageMain />
+    </Fragment>
   )
 }
 

@@ -1,0 +1,11 @@
+.footer {
+  min-height: 70px;
+  background-color: var(--dark);
+  p {
+    color: var(--orange);
+    margin: 0;
+  }
+  p:last-of-type {
+    font-size: 8px;
+  }
+}
