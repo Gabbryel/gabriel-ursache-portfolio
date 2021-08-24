@@ -1,21 +1,30 @@
 @import '../../styles/index.scss';
+$set-width: calc(var(--vh) * 15);
 
 .navbarcontainer {
   position: relative;
   width: 100%;
-  min-height: 80px;
+  min-height: $set-width;
   background-color: #000;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  @media(min-width: 768px) {
+    width: $set-width;
+    height: $set-width;
+    justify-content: center;
+  }
   .image {
     padding: 20px;
   }
   .burger {
     color: $orange;
     font-size: 30px;
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -29,20 +38,28 @@
     width: 100%;
     background-color: $dark;
     padding: 30px 0;
+    @media(min-width: 768px) {
+      display: flex;
+      top: calc(var(--vh) * 15);
+      width: $set-width;
+      height: calc(var(--vh) * 85);
+      justify-content: flex-start;
+      background-color: $darkgrey;
+    }
   }
-  .navbarcontainer__side, .roll__up  {
+  .navbar__mobile__roledown, .roll__up  {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background-color: $dark;
+    background-color: $darkgrey;
     padding: 30px 0;
+    z-index: 9;
   }
-  .navbarcontainer__side {
+  .navbar__mobile__roledown {
     animation: roll-down 1.5s ease-out;
-
   }
   .roll__up {
     top: -400px;

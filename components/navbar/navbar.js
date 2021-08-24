@@ -11,9 +11,9 @@ function Navbar () {
   const rollDownMenu = () => {
       if (menuRef.current.classList.contains(`${classes.none}`)) {
         menuRef.current.classList.remove(`${classes.none}`);
-        menuRef.current.classList.add(`${classes.navbarcontainer__side}`)
+        menuRef.current.classList.add(`${classes.navbar__mobile__roledown}`)
       } else {
-        menuRef.current.classList.remove(`${classes.navbarcontainer__side}`);
+        menuRef.current.classList.remove(`${classes.navbar__mobile__roledown}`);
         menuRef.current.classList.add(`${classes.roll__up}`)
         setTimeout(() => {
           menuRef.current.classList.add(`${classes.none}`);
@@ -21,6 +21,7 @@ function Navbar () {
         }, 900)
       }
   }
+ 
   
   return(
     <Fragment>

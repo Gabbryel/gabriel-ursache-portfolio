@@ -10,4 +10,7 @@
   color: $orange;
   border: none;
   margin: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 }

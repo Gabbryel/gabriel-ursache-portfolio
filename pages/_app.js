@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>Constantin Gabriel Ursache - full stack developer | HTML | SASS | RUBY | JAVASCRIPT | RAILS | REACTJS | NEXTJS | POSTGRESQL | MONGODB</title>
+        <title>CGU | Full Stack developer | HTML | SASS | RUBY | JAVASCRIPT | RAILS | REACTJS | NEXTJS | POSTGRESQL | MONGODB | Freelancer</title>
         <meta 
           name='description'
           content='Portfolio of the full stack web developer Constantin Gabriel Ursache'

@@ -1,51 +1,86 @@
 @import '../../styles/index.scss';
 
-
 .main {
-  position: relative;
-  min-height: calc(var(--vh) * 100 - 140px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: $dark;
-  .text {
-    color: $orange;
-    font: {
-      family: $title-font;
-      weight: 900;
-      size: clamp(1rem, calc(6px + 3vw), 3.5rem);
-    }
-    text-align: center;
-    p {
-      margin: 0;
-      &:first-of-type {
-        font: {
-          size: 1em;
-          variant: small-caps;
-        }
-        letter-spacing: .13em;
-        
-        margin: {
-          bottom: 20px;
-        }
-      }
-      &:last-of-type {
-        font: {
-          size: .79em;
-          variant: small-caps;
-        }
-        letter-spacing: .31em;
-      }
-    }
-    
+  min-height: calc(var(--vh) * 85);
+  background-color: $grey;
+  p {
+    margin: 0;
   }
-  button {
-    background-color: $orange;
-    color: $dark;
-    font-size: 20px;
-    border-radius: 0 20px 20px 0;
-    padding: 6px 25px;
-    border: none;
+  .text {
+    padding: {
+      top: 20px;
+    };
+  }
+  code {
+    position: relative;
+    color: $orange;
+    font-family: $hand-write;
+    p {
+      opacity: .2;
+      margin: 5px 0;
+    }
+    .head {
+      margin: {
+        left: 20px;
+      };
+    }
+    .title {
+      margin: {
+        left: 40px;
+      };
+    }
+    .body {
+      margin: {
+        left: 20px;
+      };
+    }
+    .h1 {
+      margin: {
+        left: 40px;
+      };
+    }
+    .ul {
+      margin: {
+        left: 40px;
+      };
+    }
+    .li {
+      margin: {
+        left: 60px;;
+      };
+    }
+    .hero_section {
+      padding: 30px 0;
+      margin: {
+        left: 40px;
+      };
+      font: {
+        family: $title-font;
+        weight: 900;
+        size: 2rem
+      }
+      opacity: 1;
+      p {
+        opacity: inherit;
+      }
+    }
+    .hero_section__text {
+      animation: pop-up 1s;
+      &:nth-child(2) {
+        display: flex;
+        align-items: center;
+      }
+    }
+    @keyframes pop-up {
+      0% {
+        transform: translate(-300px, 0);
+      }
+      50% {
+        transform: translate(100px, 0);
+      }
+      100% {
+        transform: translate(0);
+      }
+    }
   }
 }
