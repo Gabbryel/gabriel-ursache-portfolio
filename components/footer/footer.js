@@ -1,12 +1,18 @@
+import React from 'react';
 import { Fragment } from "react";
 import classes from './footer.module.scss';
+import Image from 'next/image';
+
 function Footer () {
+  const [innerWindow, setInnerWindow] = React.useState(0);
+  React.useEffect(() => setInnerWindow(window.innerWidth));
+  const imgDimension = innerWindow / 100 * 2.5;
   return(
     <Fragment>
       <div className={classes.footer}>
-        <p>e-mail: gabriel@ursache.dev</p>
-        <p>phone: +40744527976</p>
-        <p>HTML • CSS • SASS • JAVASCRIPT • RUBY • RAILS • REACTJS • NEXTJS • NODEJS • POSTGRESQL • MONGODB</p>
+        <p>all you need is </p> 
+          <Image src='/logo-v4.png' alt='logo' height={imgDimension} width={imgDimension} />
+        <p>'s code !</p>
       </div>
     </Fragment>
   )

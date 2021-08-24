@@ -9,7 +9,7 @@ function Layout (props) {
       <main>
         {props.children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   )
 }

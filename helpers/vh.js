@@ -4,7 +4,7 @@ const vh = async () => {
 };
 
 const vhOnResize = async () => {
-    await window.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
     let realHeight = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${realHeight}px`);
   })

@@ -1,3 +1,6 @@
+@import '../../styles/index.scss';
+
+
 .main {
   position: relative;
   min-height: calc(var(--vh) * 100 - 140px);
@@ -5,17 +8,44 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--dark);
+  background-color: $dark;
   .text {
-    color: var(--orange);
-    font-family: var(--title-font);
-    font-size: 24px;
+    color: $orange;
+    font: {
+      family: $title-font;
+      weight: 900;
+      size: clamp(1rem, calc(6px + 3vw), 3.5rem);
+    }
+    text-align: center;
+    p {
+      margin: 0;
+      &:first-of-type {
+        font: {
+          size: 1em;
+          variant: small-caps;
+        }
+        letter-spacing: .13em;
+        
+        margin: {
+          bottom: 20px;
+        }
+      }
+      &:last-of-type {
+        font: {
+          size: .79em;
+          variant: small-caps;
+        }
+        letter-spacing: .31em;
+      }
+    }
+    
   }
   button {
-    background-color: var(--orange);
-    color: var(--dark);
+    background-color: $orange;
+    color: $dark;
     font-size: 20px;
     border-radius: 0 20px 20px 0;
-    padding: 3px 25px;
+    padding: 6px 25px;
+    border: none;
   }
 }

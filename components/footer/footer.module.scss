@@ -1,11 +1,22 @@
+@import '../../styles/index.scss';
+
 .footer {
   min-height: 70px;
-  background-color: var(--dark);
-  p {
-    color: var(--orange);
-    margin: 0;
+  width: 100%;
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: {
+    family: $title-font;
+    size: .8rem;
+    font-weight: 900;
   }
-  p:last-of-type {
-    font-size: 8px;
+  p {
+    color: $orange;
+    margin: 0 10px;
+  }
+  img {
+    width: 100%;
   }
 }

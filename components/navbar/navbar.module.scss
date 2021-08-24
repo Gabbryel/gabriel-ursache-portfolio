@@ -1,19 +1,71 @@
+@import '../../styles/index.scss';
+
 .navbarcontainer {
   position: relative;
   width: 100%;
-  min-height: 70px;
+  min-height: 80px;
   background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
   .image {
-    position: relative;
-    width: 60px;
-    margin: 30px 0;
+    padding: 20px;
   }
   .burger {
-    color: var(--orange);
+    color: $orange;
     font-size: 30px;
   }
 }
+
+  .none {
+    position: absolute;
+    top: -400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: $dark;
+    padding: 30px 0;
+  }
+  .navbarcontainer__side, .roll__up  {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: $dark;
+    padding: 30px 0;
+  }
+  .navbarcontainer__side {
+    animation: roll-down 1.5s ease-out;
+
+  }
+  .roll__up {
+    top: -400px;
+    animation: roll-up 1.5s ease-out;
+  }
+
+  @keyframes roll-down {
+    0% {
+      transform: scale(0.1);
+      transform: translate(0, -400px);
+    }
+    100% {
+      transform: scale(1);
+      transform: translate(0);
+    }
+  }
+  @keyframes roll-up {
+    0% {
+      transform: scale(1);
+      transform: translate(0, 400px);
+    }
+    100% {
+      transform: scale(0.1);
+      transform: translate(0);
+    }
+  }
